@@ -11,6 +11,7 @@
 * React
 * Bootstrap
 * React-Bootstrap
+* Node.js
 
 ## Description
 
@@ -30,7 +31,7 @@ This React web application allows the owner of a tap room to keep track of all c
 
 ## Tree Component Diagram
 
-
+![Tree component diagram](./src/img/tree-diagram.jpg)
 
 ## License
 
