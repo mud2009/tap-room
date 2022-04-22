@@ -40,7 +40,9 @@ class TapControl extends React.Component{
 
   handlePintPurchase = (id) => {
     const purchasedPint = this.state.mainTapList.filter(tap => tap.id === id)[0];
-    purchasedPint.volume = purchasedPint.volume - 1
+    if (purchasedPint.volume > 0){
+      purchasedPint.volume = purchasedPint.volume - 1
+    }
     let purchasedPintList = this.state.mainTapList
       .filter(tap => tap.id !== purchasedPint.id)
       .concat(purchasedPint)
