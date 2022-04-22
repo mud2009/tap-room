@@ -12,7 +12,7 @@ function TapList(props){
   } else {
     return(
       <React.Fragment>
-        {props.tapList.sort((a,b) => a.name - b.name).map(tap => 
+        {props.tapList.sort((a,b) => a.name.localeCompare(b.name)).map(tap => 
           <Tap 
             whenTapClicked={props.onTapSelection}
             whenPintPurchased={props.onPintPurchase}
@@ -24,6 +24,7 @@ function TapList(props){
             id={tap.id}
             key={tap.id}/>
           )}
+          <br />
       </React.Fragment>
     );
   }
