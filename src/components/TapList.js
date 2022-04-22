@@ -12,7 +12,7 @@ function TapList(props){
   } else {
     return(
       <React.Fragment>
-        {props.tapList.map(tap => 
+        {props.tapList.sort((a,b) => a.name - b.name).map(tap => 
           <Tap 
             whenTapClicked={props.onTapSelection}
             whenPintPurchased={props.onPintPurchase}
