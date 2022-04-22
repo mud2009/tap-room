@@ -19,18 +19,21 @@ function NewTapForm(props){
         <Form onSubmit={handleNewTapFormSubmission}>
           <Form.Group>
             <Form.Control
+              className="form-input"
               type='text'
               name='name'
               placeholder='Tap Name' />
           </Form.Group>
           <Form.Group>
             <Form.Control
+              className="form-input"
               type='text'
               name='brand'
               placeholder='Brand' />
           </Form.Group>
           <Form.Group>
             <Form.Control
+              className="form-input"
               type='number'
               name='price'
               step='0.01'
@@ -38,6 +41,7 @@ function NewTapForm(props){
           </Form.Group>
           <Form.Group>
             <Form.Control
+              className="form-input"
               type='number'
               step='0.1'
               name='alcoholContent'
@@ -48,6 +52,7 @@ function NewTapForm(props){
           </Form.Group>
         </Form>
       </Container>
+      <br/>
     </React.Fragment>
   );
 }
