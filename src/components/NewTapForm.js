@@ -1,7 +1,9 @@
 import React from "react";
 import { v4 } from 'uuid';
 import PropTypes from "prop-types";
-
+import Form from 'react-bootstrap/Form'
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
 
 function NewTapForm(props){
 
@@ -13,27 +15,39 @@ function NewTapForm(props){
   return (
     
     <React.Fragment>
-      <form onSubmit={handleNewTapFormSubmission}>
-        <input
-          type='text'
-          name='name'
-          placeholder='Tap Name' />
-        <input
-          type='text'
-          name='brand'
-          placeholder='Brand' />
-        <input
-          type='number'
-          name='price'
-          step='0.01'
-          placeholder='Price' />
-        <input
-          type='number'
-          step='0.1'
-          name='alcoholContent'
-          placeholder='Alcohol Percentage' />
-        <button type='submit'>Add Tap</button>
-      </form>
+      <Container>
+        <Form onSubmit={handleNewTapFormSubmission}>
+          <Form.Group>
+            <Form.Control
+              type='text'
+              name='name'
+              placeholder='Tap Name' />
+          </Form.Group>
+          <Form.Group>
+            <Form.Control
+              type='text'
+              name='brand'
+              placeholder='Brand' />
+          </Form.Group>
+          <Form.Group>
+            <Form.Control
+              type='number'
+              name='price'
+              step='0.01'
+              placeholder='Price' />
+          </Form.Group>
+          <Form.Group>
+            <Form.Control
+              type='number'
+              step='0.1'
+              name='alcoholContent'
+              placeholder='Alcohol Percentage' />
+          </Form.Group>
+          <Form.Group>
+            <Button type='submit'>Add Tap</Button>
+          </Form.Group>
+        </Form>
+      </Container>
     </React.Fragment>
   );
 }
