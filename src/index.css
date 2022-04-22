@@ -9,6 +9,7 @@ body {
   font-family: serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: transparent !important;
 }
 
 code {
@@ -16,6 +17,9 @@ code {
     monospace;
 }
 
+#root{
+  background: transparent !important;  
+}
 
 .main-container{
   font-family: 'Garamond', Times, serif;

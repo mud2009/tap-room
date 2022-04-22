@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Button from "react-bootstrap/Button";
 
 function Tap(props){
   if (props.volume < 1){
@@ -19,7 +20,7 @@ function Tap(props){
           <div onClick={() => props.whenTapClicked(props.id)}>
             <h4>{props.name} - {props.volume} pints left</h4>
           </div>
-          <button onClick={() => props.whenPintPurchased(props.id)}>Purchase pint</button>
+          <Button onClick={() => props.whenPintPurchased(props.id)}>Purchase pint</Button>
         </div>
       </React.Fragment>
     )  

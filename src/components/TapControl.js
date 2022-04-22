@@ -2,6 +2,7 @@ import React from "react";
 import NewTapForm from "./NewTapForm";
 import TapDetail from "./TapDetail";
 import TapList from "./TapList";
+import Button from "react-bootstrap/Button";
 
 class TapControl extends React.Component{
 
@@ -80,7 +81,7 @@ class TapControl extends React.Component{
     return(
       <React.Fragment>
         {currentlyVisibleState}
-        <button onClick={this.handleClick}>{buttonText}</button>
+        <Button onClick={this.handleClick}>{buttonText}</Button>
       </React.Fragment>
     )  
   }
