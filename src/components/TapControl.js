@@ -48,7 +48,6 @@ class TapControl extends React.Component{
       mainTapList: purchasedPintList,
       selectedTap: null
     })
-    console.log(purchasedPint)
   }
 
   render(){
