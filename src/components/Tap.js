@@ -4,10 +4,12 @@ import PropTypes from "prop-types";
 function Tap(props){
   return(
     <React.Fragment>
-      <div onClick={() => props.whenTapClicked(props.id)}>
-        <h4>{props.name}</h4>
+      <div>
+        <div onClick={() => props.whenTapClicked(props.id)}>
+          <h4>{props.name} - {props.volume} pints left</h4>
+        </div>
+        <button onClick={() => props.whenPintPurchased(props.id)}>Purchase pint</button>
       </div>
-      <button onClick={() => props.whenPintPurchased(props.id)}>Purchase pint</button>
     </React.Fragment>
   )
 }
