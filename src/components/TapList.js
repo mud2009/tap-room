@@ -15,6 +15,7 @@ function TapList(props){
         {props.tapList.map(tap => 
           <Tap 
             whenTapClicked={props.onTapSelection}
+            whenPintPurchased={props.onPintPurchase}
             name={tap.name}
             brand={tap.brand}
             price={tap.price}
@@ -30,7 +31,8 @@ function TapList(props){
 
 TapList.propTypes = {
   tapList: PropTypes.array,
-  onTapSelection: PropTypes.func
+  onTapSelection: PropTypes.func,
+  onPintPurchase: PropTypes.func
 }
 
 export default TapList;
