@@ -11,7 +11,7 @@ function TapDetail(props){
         <p>Brand: {tap.brand}</p>
         <p>Price: ${tap.price}</p>
         <p>ABV: {tap.alcoholContent}%</p>
-        <h3>Pints left: {tap.volume}</h3>
+        <h5>Pints left: {tap.volume}</h5>
         <Button onClick={() => onDeleteTap(tap.id)}>Remove Tap</Button>
       </div>
       <br/>
