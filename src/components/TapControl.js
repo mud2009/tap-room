@@ -52,18 +52,28 @@ class TapControl extends React.Component{
     })
   }
 
+  handleDeleteTap = (id) => {
+    const newMainTapList = this.state.mainTapList.filter(tap => tap.id !== id);
+    this.setState({
+      mainTapList: newMainTapList,
+      selectedTap: null
+    })
+  } 
+
   render(){
     let currentlyVisibleState = null;
     let buttonText = null;
 
     if (this.state.selectedTap !== null){
-      currentlyVisibleState = <TapDetail tap = {this.state.selectedTap} />
+      currentlyVisibleState = <TapDetail tap = {this.state.selectedTap} onDeleteTap={this.handleDeleteTap}/>
       buttonText = "Return to tap list";
     } else if (this.state.formVisible){
       currentlyVisibleState = <NewTapForm onHandleNewTap={this.handleAddNewTap} />
       buttonText= "Return to tap list";
     } else {
-      currentlyVisibleState = <TapList tapList={this.state.mainTapList} onTapSelection={this.handleChangingSelectedTap} onPintPurchase={this.handlePintPurchase}/>
+      currentlyVisibleState = <TapList tapList={this.state.mainTapList}
+        onTapSelection={this.handleChangingSelectedTap}
+        onPintPurchase={this.handlePintPurchase}/>
       buttonText= "Add tap";
     }
 
